@@ -5,3 +5,5 @@
 2.Make a root folder named as LLM or any name you want and create a sub folder named as "models" and save the Llama model there. 
 
 3.Install the requirements 
+
+4.Run the code as "streamlit run app.py"
