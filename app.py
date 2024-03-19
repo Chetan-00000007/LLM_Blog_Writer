@@ -2,10 +2,10 @@ import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain.llms import CTransformers
 
-## to get llma model
+## To get llma model
 
 def getLLamaresponse(input_text,no_words,blog_style):
-    ## LLAMA 2 mod
+    ## LLAMA 2 model
 
     llm = CTransformers(model = "models/llama-2-7b-chat.ggmlv3.q8_0.bin", 
                         model_type =  'llama', 
@@ -19,7 +19,7 @@ def getLLamaresponse(input_text,no_words,blog_style):
     prompt = PromptTemplate(input_variables = ["blog_style","input_text","no_words"],
                             template = template)
     
-    ## geerate res
+    ## To generate Response
     
     response = llm(prompt.format(blog_style = blog_style,input_text = input_text, no_words = no_words))
     print(response)
@@ -32,7 +32,7 @@ st.set_page_config(page_title = "Generate Blogs",
                    initial_sidebar_state = "collapsed")
 
 
-st.header("Generate Blogs 🦈")
+st.header("AI Generated Blogs 🦈")
 
 
 input_text = st.text_input("Enter the blog Topic")
