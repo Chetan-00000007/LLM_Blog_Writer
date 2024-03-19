@@ -8,3 +8,5 @@
 3.Install the requirements 
 
 4.Run the code as "streamlit run app.py"
+
+5.Python version 3.9
